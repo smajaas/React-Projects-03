@@ -6,7 +6,7 @@ import { useGlobalContext } from './Context';
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
   return (
-    <aside className='sidebar'>
+    <aside className={isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}>
       <div className='sidebar-container'>
         <button className='close-btn' onClick={closeSidebar}>
           <FaTimes />
